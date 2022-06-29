@@ -26,7 +26,7 @@ export default function Home({ jobsData }) {
 		const filteredJobs = location ? filterJobs(jobsData, location) : jobsData;
 		setJobs(filteredJobs);
 	};
-  console.log(jobs);
+
   return (
     <div className="bg-slate-100 min-h-screen">
       <Head>
@@ -43,7 +43,7 @@ export default function Home({ jobsData }) {
           Get your dream Jobs!
         </h1>
         <SearchJob handleOnSearch={handleOnSearch} />
-        <div className="grid grid-cols-6 md:gap-6 mt-16 py-2">
+        <div className="grid grid-cols-6 md:gap-6 mt-8 py-2">
           {jobs.length > 0 ? jobs.map((job) => (
             <div
               key={job.id}

@@ -22,23 +22,25 @@ export const SearchJob = ({ handleOnSearch }) => {
   };
 
   return (
+    <div className="px-8">
       <div className="flex items-center shadow-sm max-w-md mx-auto mt-8 focus-within:shadow-lg">
         <input
           type="text"
-          className="p-2 rounded-l-md flex-1 focus:outline-none font-light text-gray-600 ml-6"
+          className="p-2 rounded-l-md flex-1 focus:outline-none font-light text-gray-600"
           onKeyDown={handleOnKeyDown}
           onChange={handleOnChange}
-          placeholder="Enter job location: City, Country, Remote"
+          placeholder="Enter job location: City, Country"
           aria-label="Enter Job location"
         />
         <span
-          className=" bg-green-400 text-white px-4 py-2 rounded-r-md mr-6"
+          className=" bg-green-400 text-white px-4 py-2 rounded-r-md"
           onClick={() => handleOnSearch(location)}
           role="button"
         >
           Search
         </span>
       </div>
+    </div>
   );
 };
 
