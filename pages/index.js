@@ -65,13 +65,13 @@ export default function Home({ jobsData }) {
                     className="rounded-lg mr-3"
                   />
                   <div>
-                    <h4 className="font-medium md:font-semibold text-sm md:text-base -mt-1">
+                    <h4 className="font-medium md:font-semibold -mt-1">
                       {job.title}
                     </h4>
-                    <h5 className="text-gray-500 text-sm">
+                    <h5 className="text-gray-500">
                       {job.company.name}
                     </h5>
-                    <div className="text-xs font-light text-gray-600 mt-2">
+                    <div className="text-sm font-light text-gray-600 mt-2">
                       {job.cities.length > 0
                         ? job.cities.map((city, i) => (
                             <span key={city.id}>
